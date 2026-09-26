@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../theme/app_theme.dart';
@@ -38,7 +39,6 @@ class AuthPageFrame extends StatelessWidget {
                         pose: pose,
                         height: headerHeight,
                         mascotWidth: mascotWidth,
-                        onBack: onBack,
                       ),
                       Transform.translate(
                         offset: const Offset(0, -72),
@@ -86,34 +86,19 @@ class AuthHeader extends StatelessWidget {
                 filterQuality: FilterQuality.high,
               ),
             ),
-            Positioned(
-              top: 61,
-              left: 18,
-              child: Material(
-                color: Colors.white.withOpacity(.14),
-                shape: const CircleBorder(),
-                child: InkWell(
-                  onTap: onBack,
-                  customBorder: const CircleBorder(),
-                  child: const SizedBox(
-                    width: 46,
-                    height: 46,
-                    child: Icon(
-                      Icons.chevron_left_rounded,
-                      color: Colors.white,
-                      size: 34,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+
+            // Back button removed.
+            
             Positioned(
               top: 76,
               left: 0,
               right: 0,
               child: Column(
                 children: [
-                  Text('Worly', style: AppText.logo),
+                  Text(
+                    'Worly',
+                    style: AppText.logo,
+                  ),
                   const SizedBox(height: 7),
                   Text(
                     'Learn new words easily',
